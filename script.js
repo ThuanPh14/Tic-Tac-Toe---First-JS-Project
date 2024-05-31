@@ -69,6 +69,8 @@ function checkWin(currentClass) {
 function endGame(draw) {
     if (draw) {
         winningMessageElement.innerText = 'Draw!';
+        turnCountMessageElement.innerText = `Game ended in ${turnCount} turns!`;
+        loserMessageElement.innerText = `No one is a loser!`;
     } else {
         winningMessageElement.innerText = `${xTurn ? "X" : "O"} Wins!`;
         turnCountMessageElement.innerText = `Easy win in ${turnCount} turns!`;
