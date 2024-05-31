@@ -6,7 +6,7 @@ const winningMessageElement = document.getElementById('winning');
 const turnCountMessageElement = document.getElementById('turnCount');
 const loserMessageElement = document.getElementById('losing');
 const restartButton = document.getElementById('restartButton');
-let turnCount = 1; 
+let turnCount; 
 const winStates = [
     [0, 1, 2],
     [3, 4, 5],
@@ -23,6 +23,7 @@ restartButton.addEventListener('click', startGame);
 
 function startGame() {
     xTurn = true;
+    turnCount = 1;
     cellElements.forEach(cell => {
         cell.classList.remove('x');
         cell.classList.remove('o');
